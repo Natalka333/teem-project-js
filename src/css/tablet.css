@@ -1,0 +1,31 @@
+@media screen and (min-width: 768px) {
+  .hero-container {
+    max-width: 768px;
+  }
+}
+
+.hero-link {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
