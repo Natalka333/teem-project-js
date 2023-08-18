@@ -25,7 +25,7 @@
     <main class="hero">
       <div class="hero-container">
         <section class="hero-section">
-          <h1>
+          <h1 class="title">
             <a href="#top" class="hero-title"
               >Learn to Cook
               <span class="hero-link">Tasty Treats'</span> Customizable
@@ -36,7 +36,7 @@
             TastyTreats - Customize Your Meal with Ingredient Options and
             Step-by-Step Video Guides.
           </p>
-          <button class="hero-btn">Order now</button>
+          <button data-order-open type="button" class="hero-btn">Order now</button>
         </section>
       </div>
 
@@ -50,33 +50,76 @@
           <div class="itc-slider__wrapper">
             <div class="itc-slider__items">
               <div class="itc-slider__item">
-                <!-- Контент 1 слайда -->
+                
                 1
               </div>
               <div class="itc-slider__item">
-                <!-- Контент 2 слайда -->
+                
                 2
               </div>
               <div class="itc-slider__item">
-                <!-- Контент 3 слайда -->
+               
                 3
               </div>
               <div class="itc-slider__item">
-                <!-- Контент 4 слайда -->
+                
                 4
               </div>
               <div class="itc-slider__item">
-                <!-- Контент 5 слайда -->
+                
                 5
               </div>
             </div>
           </div>
           <button class="itc-slider__btn itc-slider__btn_prev"></button>
           <button class="itc-slider__btn itc-slider__btn_next"></button>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div>
     </main>
+		<div class="backdrop is-hidden" data-order>
+				<div class="order">
+						<button class="order-close-btn" type="button" data-order-close >
+									<svg class="order-icon-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+  <path d="M18 6L6 18" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M6 6L18 18" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg> <use href="#"></use></svg></button>
+<p class="order-title">ORDER NOW</p>
+								<form class="order-form">
+								<div class="order-field">
+									<label for="user-name" class="input-text">Name</label>
+									
+								<div class="input-wrap">
+									<input type="text" class="order-input" name="user-name" id="user-name"> 
+										</div>
+								</div>
+								
+								<div class="order-field">
+									<label for="user-phone" class="input-text">Phone number</label>
+									
+								<div class="input-wrap">
+									<input type="tel" class="order-input" name="user-phone" id="user-phone">	
+								</div>
+								</div>
+								<div class="order-field">
+									<label for="user-email" class="input-text">Email</label>
+									
+								<div class="input-wrap">
+									<input type="email" class="order-input" name="user-email" id="input-email">
+								</div>
+								</div>
+								<div class="order-textarea">
+									<label for="user-email" class="user-text">Comment</label>
+									
+										<textarea name="user-text" id="user-text" class="user-textarea"></textarea>
+									
+									
+								</div>
+								
+								</form>
+									<button type="submit" class="input-button">Send</button>
+				</div>
     <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+		
     <script src="./js/index.js" type="module"></script>
   </body>
 </html>
