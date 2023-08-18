@@ -1,0 +1,2 @@
+!function(){var e={openOrgerBtn:document.querySelector("[data-order-open]"),closeOrgerBtn:document.querySelector("[data-order-close]"),order:document.querySelector("[data-order]")};function r(){e.order.classList.toggle("is-hidden"),document.body.classList.toggle("no-scroll")}e.openOrgerBtn.addEventListener("click",r),e.closeOrgerBtn.addEventListener("click",r)}();
+//# sourceMappingURL=index.e787df07.js.map
