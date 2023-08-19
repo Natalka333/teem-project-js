@@ -1,6 +1,6 @@
 import Swiper, { Pagination, Navigation, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
-import { fetchMasterClass } from './apitasty';
+import { fetchMasterClass } from './apiTasty';
 
 const swiperContainerEl = document.querySelector('.swiper-container');
 
