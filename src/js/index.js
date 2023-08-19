@@ -1,6 +1,7 @@
 import {} from './modal';
 import 'swiper/swiper-bundle.min.css'; // Импорт стилей Swiper.js
 import Swiper from 'swiper'; // Импорт Swiper.js без бандла
+import { fetchImages } from './apitasty';
 
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
