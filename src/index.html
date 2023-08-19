@@ -42,67 +42,69 @@
       <!-- slaider -->
 
       <div class="swiper-container">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <!-- Slides -->
+          <!-- <a href="#">
+        <img src="https://cdn2.thecatapi.com/images/bTo6m3PVg.jpg" alt="#">
+          </a>
+					 <a href="#">
+        <img src="https://cdn2.thecatapi.com/images/zTiuUpmqf.jpg" alt="#">
+          </a>
+					 <a href="#">
+        <img src="https://cdn2.thecatapi.com/images/kOAHCDEzA.jpg" alt="#">
+          </a> -->
         </div>
-        <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
       </div>
     </main>
     <div class="backdrop is-hidden" data-order>
-				<div class="order">
-						<button class="order-close-btn" type="button" data-order-close >
-									<svg class="order-icon-btn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-  <path d="M18 6L6 18" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M6 6L18 18" stroke="#050505" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg> <use href="#"></use></svg></button>
-<p class="order-title">ORDER NOW</p>
-								<form class="order-form">
-								<div class="order-field">
-									<label for="user-name" class="input-text">Name</label>
-									
-								<div class="input-wrap">
-									<input type="text" class="order-input" name="user-name" id="user-name"> 
-										</div>
-								</div>
-								
-								<div class="order-field">
-									<label for="user-phone" class="input-text">Phone number</label>
-									
-								<div class="input-wrap">
-									<input type="tel" class="order-input" name="user-phone" id="user-phone">	
-								</div>
-								</div>
-								<div class="order-field">
-									<label for="user-email" class="input-text">Email</label>
-									
-								<div class="input-wrap">
-									<input type="email" class="order-input" name="user-email" id="input-email">
-								</div>
-								</div>
-								<div class="order-textarea">
-									<label for="user-email" class="user-text">Comment</label>
-									
-										<textarea name="user-text" id="user-text" class="user-textarea"></textarea>
-									
-									
-								</div>
-								
-								</form>
-									<button type="submit" class="input-button">Send</button>
-				</div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+      <div class="order">
+        <button class="order-close-btn" type="button" data-order-close>
+          <svg class="order-icon-btn" width="24" height="24">
+            <use href="#"></use>
+          </svg>
+        </button>
+        <p class="order-title">ORDER NOW</p>
+        <form class="order-form" id="order-form">
+          <label for="name" class="order-form-label">Name</label>
+          <input
+            type="text"
+            class="input-js order-input"
+            id="name"
+            name="name"
+            required
+          />
+
+          <label for="phone" class="order-form-label">Phone number</label>
+          <input
+            type="tel"
+            class="input-js order-input"
+            name="phone"
+            id="phone"
+            required
+          />
+
+          <label for="email" class="order-form-label">Email</label>
+          <input
+            type="email"
+            class="input-js order-input"
+            name="email"
+            id="email"
+            required
+          />
+
+          <label for="email" class="order-form-label">Comment</label>
+          <textarea
+            name="comment"
+            id="comment"
+            class="order-form-comment"
+          ></textarea>
+        </form>
+        <button type="submit" class="input-button" disabled>Send</button>
+      </div>
+    </div>
 
     <script src="./js/apitasty.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
-    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/order.js" type="module"></script>
   </body>
 </html>
