@@ -1,10 +1,10 @@
 import {} from './order';
 // import 'swiper/swiper-bundle.min.css';
 // import Swiper from 'swiper';
-import { fetchMasterClasses } from './apitasty';
+import { fetchMasterClass } from './apitasty';
 
 const swiperContainerEl = document.querySelector('.swiper-container');
-const swiperWrapperEl = document.querySelector('.swiper-wrapper');
+// const swiperWrapperEl = document.querySelector('.swiper-wrapper');
 
 function renderGallery(masterClasses) {
   const markup = masterClasses
@@ -29,5 +29,11 @@ function renderGallery(masterClasses) {
   `;
     })
     .join('');
-  swiperWrapperEl.insertAdjacentHTML('beforeend', markup);
+  swiperContainerEl.insertAdjacentHTML('beforeend', markup);
 }
+
+async function main() {
+  const masterClassData = await fetchMasterClass();
+}
+
+main();

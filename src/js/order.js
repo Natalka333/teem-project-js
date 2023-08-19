@@ -1,14 +1,14 @@
 (() => {
   const refs = {
     openOrderBtn: document.querySelector('[data-order-open]'),
-    closeOrgerBtn: document.querySelector('[data-order-close]'),
+    closeOrderBtn: document.querySelector('[data-order-close]'),
     order: document.querySelector('[data-order]'),
   };
 
-  refs.openOrgerBtn.addEventListener('click', toggleOrder);
-  refs.closeOrgerBtn.addEventListener('click', toggleOrder);
+  refs.openOrderBtn.addEventListener('click', toggleOrder);
+  refs.closeOrderBtn.addEventListener('click', toggleOrder);
 
-  function toggleOrger() {
+  function toggleOrder() {
     refs.order.classList.toggle('is-hidden');
     document.body.classList.toggle('no-scroll');
   }

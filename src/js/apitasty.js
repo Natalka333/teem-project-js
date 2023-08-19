@@ -3,49 +3,60 @@ import Notiflix from 'notiflix';
 
 import axios from 'axios';
 
-async function fetchData() {
-  try {
-    const response = await axios.get(
-      'https://tasty-treats-backend.p.goit.global/api/events'
-    );
-    const data = response.data;
-    console.log(data);
-    return data;
-  } catch (error) {
+axios.defaults.baseURL =
+  'https://tasty-treats-backend.p.goit.global/api/events';
+
+axios.interceptors.response.use(
+  response => {
+    return response;
+  },
+  error => {
     Notiflix.Notify.failure('Something went wrong. Please try again later.');
     return Promise.reject(error);
   }
+);
+
+async function fetchMasterClass() {
+  const response = await axios.get('');
+  const masterClass = response.data;
+  console.log(masterClass);
+
+  return masterClass;
 }
 
-// // Вызов функции для получения данных
-// async function main() {
-//   const eventsData = await fetchData();
+export { fetchMasterClass };
 
-//   if (eventsData) {
-//     console.log('Полученные данные:', eventsData);
-//     // Дальше вы можете обрабатывать данные, например, создавать слайды для слайдера
-//     // ...
-//   }
+// async function main() {
+//   const masterClassData = await fetchMasterClass();
 // }
 
 // main();
 
-// axios.defaults.baseURL =
-//   'https://tasty-treats-backend.p.goit.global/api/events';
-// axios.interceptors.response.use(
-//   response => {
-//     return response;
-//   },
-//   error => {
-//     Notiflix.Notify.failure('Something went wrong. Please try again later.');
-//     return Promise.reject(error);
-//   }
-// );
+// const swiperContainerEl = document.querySelector('.swiper-container');
+// // const swiperWrapperEl = document.querySelector('.swiper-wrapper');
 
-// async function fetchMasterClasses() {
-//   const response = await axios.get(`baseURL`);
-
-//   return response.data;
+// function renderGallery(masterClasses) {
+//   const markup = masterClasses
+//     .map(masterClass => {
+//       return `<div class="swiper-slide" id="crutch">
+//   <div class="event">
+//     <div class="cook" style="background-image: url({{cook.imgUrl}});">
+//     </div>
+//     <div class="preview-deash-card" >
+//       <div class="preview-deash" style="background-image: url({{topic.previewUrl}});"></div>
+//       <p class="deash-name">
+//         {{topic.name}}
+//       </p>
+//       <p class="deash-area">
+//         {{topic.area}}
+//       </p>
+//     </div>
+//     <div class="deash" style="background-image: url({{topic.previewUrl}});">
+//     </div>
+//   </div>
+//   </div>
+//   `;
+//     })
+//     .join('');
+//   swiperContainerEl.insertAdjacentHTML('beforeend', markup);
 // }
-
-// export { fetchMasterClasses };
