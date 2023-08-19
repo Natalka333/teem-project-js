@@ -1,8 +1,6 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-import axios from 'axios';
-
 axios.defaults.baseURL =
   'https://tasty-treats-backend.p.goit.global/api/events';
 
@@ -25,3 +23,21 @@ async function fetchMasterClass() {
 }
 
 export { fetchMasterClass };
+
+// const INITIAL_REQUEST = `https://tasty-treats-backend.p.goit.global/api/events`;
+
+// export async function fetchMasterClass() {
+//   try {
+//     const response = await axios.get(INITIAL_REQUEST);
+
+//     if (response.status === 404) {
+//       throw new Error(response.status);
+//     }
+
+//     return response.data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+
+// export { fetchMasterClass };

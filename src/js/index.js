@@ -1,5 +1,5 @@
+import Swiper, { Pagination, Navigation, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
-import Swiper, { Pagination, Navigation, Autoplay } from 'swiper/bundle'; // Импорт Swiper.js с бандлом
 import { fetchMasterClass } from './apitasty';
 
 const swiperContainerEl = document.querySelector('.swiper-container');
@@ -27,21 +27,25 @@ async function renderGallery() {
       .join('');
 
     swiperContainerEl.innerHTML = markup;
-
-    new Swiper('.swiper-container', {
-      modules: [Pagination, Navigation, Autoplay],
-      allowSlideNext: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 1500,
-      },
-      speed: 800,
-      loop: true,
-    });
   }
-}
 
-renderGallery();
+  // const allInContainer = document.querySelector('.event');
+
+  // fetchMasterClass().then(data => {
+  //   allInContainer.insertAdjacentHTML('beforeend', renderGallery);
+  // });
+  const swiper = new Swiper('.swiper-container', {
+    modules: [Pagination, Navigation, Autoplay],
+    allowSlideNext: true,
+    pagination: {
+      el: '.page',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 1500,
+    },
+    speed: 800,
+    loop: true,
+  });
+}
+// renderGallery();
