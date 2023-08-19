@@ -26,11 +26,23 @@ document.addEventListener('DOMContentLoaded', function () {
 // const slideHTML = masterClasses
 //   .map(
 //     masterClass => `
-//     <div class="swiper-slide">
-//       <a href="${masterClass.link}">
-//         <img src="${masterClass.imageUrl}" alt="${masterClass.title}">
-//       </a>
+//    <div class="swiper-slide" id="crutch">
+//   <div class="event">
+//     <div class="cook" style="background-image: url({{cook.imgUrl}});">
 //     </div>
+//     <div class="preview-deash-card" >
+//       <div class="preview-deash" style="background-image: url({{topic.previewUrl}});"></div>
+//       <p class="deash-name">
+//         {{topic.name}}
+//       </p>
+//       <p class="deash-area">
+//         {{topic.area}}
+//       </p>
+//     </div>
+//     <div class="deash" style="background-image: url({{topic.previewUrl}});">
+//     </div>
+//   </div>
+// </div>
 //   `
 //   )
 //   .join('');
