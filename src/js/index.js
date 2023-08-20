@@ -52,18 +52,86 @@ function createMarkupSwiper(arrSliders) {
 //   loop: true,
 // });
 
-const swiper = new Swiper('hero', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
 
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// });
+
+const swiper = new Swiper('.swiper', {
+  // Default parameters
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+
+    direction: 'vertical',
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
   },
 });
+
+// fetchMasterClass()
+//   .then(data => {
+//     createMarkupSwiper(data);
+//   })
+//   .catch(error => console.log(error));
+
+// function createMarkupSwiper(arrSliders) {
+//   const swiperWrapperEl = document.querySelector('.swiper-wrapper');
+
+//   swiperWrapperEl.insertAdjacentHTML(
+//     'beforeend',
+//     arrSliders
+//       .map(
+//         ({ cook, topic }) =>
+//           `<div class="swiper-slide" id="twist">
+//             <div class="hero">
+//               <div class="cook" style="background-image: url(${cook.imgUrl});"></div>
+//               <div class="preview-dish-card">
+//                 <div class="preview-dish" style="background-image: url(${topic.previewUrl});"></div>
+//                 <p class="dish-name">${topic.name}</p>
+//                 <p class="dish-area">${topic.area}</p>
+//               </div>
+//               <div class="dish" style="background-image: url(${topic.previewUrl});"></div>
+//             </div>
+//           </div>`
+//       )
+
+//       .join('')
+//   );
+// }
