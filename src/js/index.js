@@ -7,68 +7,68 @@ import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper-bundle.min.mjs';
 // import Swiper, { Pagination, Navigation } from 'swiper';
 
-// const swiperContainerEl = document.querySelector('.swiper');
-const swiperWrapperEl = document.querySelector('.swiper-wrapper');
+fetchMasterClass()
+  .then(data => {
+    createMarkupSwiper(data);
+  })
+  .catch(error => console.log(error));
 
-async function renderGallery() {
-  const masterClassData = await fetchMasterClass();
+function createMarkupSwiper(arrSliders) {
+  const swiperWrapperEl = document.querySelector('.swiper-wrapper');
 
-  if (masterClassData && masterClassData.length > 0) {
-    const markup = masterClassData
-      .map(item => {
-        return `
-          <div class="swiper-slide" id=""twist">
+  swiperWrapperEl.insertAdjacentHTML(
+    'beforeend',
+    arrSliders
+      .map(({ cook, topic }) => {
+        return `<div class="swiper-slide" id="twist"> <!-- Исправлено здесь -->
             <div class="hero">
-              <div class="cook" style="background-image: url(${item.cook.imgUrl});">
-							</div>
+              <div class="cook" style="background-image: url(${cook.imgUrl});"></div>
               <div class="preview-dish-card">
-                <div class="preview-dish" style="background-image: url(${item.topic.previewUrl});"></div>
-                <p class="dish-name">${item.topic.name}</p>
-                <p class="dish-area">${item.topic.area}</p>
+                <div class="preview-dish" style="background-image: url(${topic.previewUrl});"></div>
+                <p class="dish-name">${topic.name}</p>
+                <p class="dish-area">${topic.area}</p>
               </div>
-              <div class="dish" style="background-image: url(${item.topic.previewUrl});"></div>
+              <div class="dish" style="background-image: url(${topic.previewUrl});"></div>
             </div>
-          </div>
-        `;
+          </div>`;
       })
-      .join('');
-
-    swiperWrapperEl.insertAdjacentHTML('beforeend', markup);
-  }
-  // const swiper = new Swiper('.image-slider', {
-  //   modules: [Pagination, Navigation, Autoplay],
-  //   allowSlideNext: true,
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     clickable: true,
-  //   },
-  //   autoplay: {
-  //     delay: 1500,
-  //   },
-  //   speed: 800,
-  //   loop: true,
-  // });
-
-  const swiper = new Swiper('image-slider', {
-    // Optional parameters
-    direction: 'vertical',
-    loop: true,
-
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+      .join('')
+  );
 }
-renderGallery();
+
+// const swiper = new Swiper('.image-slider', {
+//   modules: [Pagination, Navigation, Autoplay],
+//   allowSlideNext: true,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true,
+//   },
+//   autoplay: {
+//     delay: 1500,
+//   },
+//   speed: 800,
+//   loop: true,
+// });
+
+const swiper = new Swiper('image-slider', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});

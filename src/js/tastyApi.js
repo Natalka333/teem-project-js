@@ -4,9 +4,6 @@ import Notiflix from 'notiflix';
 axios.defaults.baseURL =
   'https://tasty-treats-backend.p.goit.global/api/events';
 
-// axios.defaults.baseURL =
-//   'https://tasty-treats-backend.p.goit.global/HestonChan.png';
-
 axios.interceptors.response.use(
   response => {
     return response;
