@@ -19,19 +19,21 @@ function createMarkupSwiper(arrSliders) {
   swiperWrapperEl.insertAdjacentHTML(
     'beforeend',
     arrSliders
-      .map(({ cook, topic }) => {
-        return `<div class="swiper-slide" id="twist"> <!-- Исправлено здесь -->
-            <div class="hero">
-              <div class="cook" style="background-image: url(${cook.imgUrl});"></div>
-              <div class="preview-dish-card">
-                <div class="preview-dish" style="background-image: url(${topic.previewUrl});"></div>
-                <p class="dish-name">${topic.name}</p>
-                <p class="dish-area">${topic.area}</p>
-              </div>
-              <div class="dish" style="background-image: url(${topic.previewUrl});"></div>
-            </div>
-          </div>`;
-      })
+      .map(
+        ({ cook, topic }) =>
+          `<div class="hero swiper-slide">
+                <div class=" hero slider-images">
+                    <div class="hero image-container-1"><img class="image-1" src=${cook.imgUrl} alt=${cook.name}></div>
+                    <div class="hero image-container-2">
+                        <img class="hero image-2" src=${topic.previewUrl} alt=${cook.name}>
+                        <h2 class="hero image-title">${topic.name}</h2>
+                        <p class="hero image-descraption">${topic.area}</p>
+                    </div>
+                    <div class="hero image-container-3"><img class="image-3" src=${topic.imgUrl} alt=${cook.name}></div>
+                </div>
+            </div>`
+      )
+
       .join('')
   );
 }
@@ -72,3 +74,50 @@ const swiper = new Swiper('image-slider', {
     el: '.swiper-scrollbar',
   },
 });
+
+// fetchMasterClass()
+//   .then(data => {
+//     createMarkupSwiper(data);
+//   })
+//   .catch(error => console.log(error));
+
+// function createMarkupSwiper(arrSliders) {
+//   const swiperWrapperEl = document.querySelector('.swiper-wrapper');
+
+//   swiperWrapperEl.insertAdjacentHTML(
+//     'beforeend',
+//     arrSliders
+//       .map(
+//         ({ cook, topic }) =>
+//           `<div class="swiper-slide id="twist">
+//                 <div class="slider-images">
+//                     <div class="image-container-1">
+// 										<img class="image-1" src=${cook.imgUrl} alt=${cook.name}>
+// 										</div>
+//                     <div class="image-container-2">
+//                         <img class="image-2" src=${topic.previewUrl} alt=${cook.name}>
+//                         <h2 class="image-title">${topic.name}</h2>
+//                         <p class="image-descraption">${topic.area}</p>
+//                     </div>
+//                     <div class="image-container-3">
+// 										<img class="image-3" src=${topic.imgUrl} alt=${cook.name}>
+// 										</div>
+//                 </div>
+//             </div>`
+//       )
+
+//       .join('')
+//   );
+// }
+
+// {/* <div class="swiper-slide" id="twist"> <!-- Исправлено здесь -->
+// //             <div class="hero">
+// //               <div class="cook" style="background-image: url(${cook.imgUrl});"></div>
+// //               <div class="preview-dish-card">
+// //                 <div class="preview-dish" style="background-image: url(${topic.previewUrl});"></div>
+// //                 <p class="dish-name">${topic.name}</p>
+// //                 <p class="dish-area">${topic.area}</p>
+// //               </div>
+// //               <div class="dish" style="background-image: url(${topic.previewUrl});"></div>
+// //             </div>
+// //           </div>`; */}

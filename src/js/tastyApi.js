@@ -15,7 +15,7 @@ axios.interceptors.response.use(
 );
 
 async function fetchMasterClass() {
-  const response = await axios.get('');
+  const response = await axios.get();
 
   console.log(response.data);
 
