@@ -1,7 +1,7 @@
 import Swiper, { Pagination, Navigation, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 import Swiper from 'swiper';
-import { fetchMasterClass } from './apiTasty';
+import { fetchMasterClass } from './tastyApi';
 
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper-bundle.min.mjs';
