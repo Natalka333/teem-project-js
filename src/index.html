@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    /> -->
+
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/swiper.css" />
     <link
@@ -23,41 +20,45 @@
   </head>
   <body>
     <!-- HERO -->
-    <main class="hero">
-      <div class="hero-container">
-        <section class="hero-section">
-          <h1 class="title">
-            <a href="#top" class="hero-title"
-              >Learn to Cook
-              <span class="hero-link">Tasty Treats'</span> Customizable
-              Masterclass</a
-            >
-          </h1>
-          <p class="hero-subtitle">
-            TastyTreats - Customize Your Meal with Ingredient Options and
-            Step-by-Step Video Guides.
-          </p>
-          <button data-order-open type="button" class="hero-btn">
-            Order now
-          </button>
-        </section>
-      </div>
+    <main class="main">
+      <section class="hero-list">
+        <div class="container hero-container">
+          <div class="hero-description">
+            <h1 class="title">
+              <a href="#top" class="hero-title"
+                >Learn to Cook
+                <span class="hero-link">Tasty Treats'</span> Customizable
+                Masterclass</a
+              >
+            </h1>
+            <p class="hero-subtitle">
+              TastyTreats - Customize Your Meal with Ingredient Options and
+              Step-by-Step Video Guides.
+            </p>
+            <button data-order-open type="button" class="hero-btn hero-order">
+              Order now
+            </button>
+          </div>
 
-      <!-- Slider main container -->
-      <div class="swiper mySwiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          ...
+          <!-- Slider main container -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <h2>swiper</h2>
+
+            <div class="hero swiper-wrapper">
+              <!-- Slides -->
+            </div>
+            ...
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
+      </section>
     </main>
-    <div class="backdrop is-hidden" data-order>
+    <!-- <div class="backdrop is-hidden" data-order>
       <div class="order">
         <button class="order-close-btn" type="button" data-order-close>
           <svg class="order-icon-btn" width="24" height="24">
@@ -102,8 +103,8 @@
         </form>
         <button type="submit" class="input-button" disabled>Send</button>
       </div>
-    </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script> -->
+    </div> -->
+
     <script src="./js/swiper.js" type="module"></script>
     <script src="./js/apiTasty.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
