@@ -265,9 +265,11 @@ body {
 }
 
 /* swiper */
-.swiper {
-  width: 600px;
-  height: 300px;
+
+html,
+body {
+  position: relative;
+  height: 100%;
 }
 
 body {

@@ -1,6 +1,6 @@
-// import Swiper, { Pagination, Navigation } from 'swiper';
-// import 'swiper/swiper-bundle.min.css';
-// import Swiper from 'swiper';
+import Swiper, { Pagination, Navigation } from 'swiper';
+import 'swiper/swiper-bundle.min.css';
+import Swiper from 'swiper';
 import { fetchMasterClass } from './apiTasty';
 
 // import 'swiper/swiper-bundle.min.css';
@@ -34,6 +34,12 @@ async function renderGallery() {
 
     swiperContainerEl.insertAdjacentHTML('beforeend', markup);
   }
+
+  const swiper = new Swiper('.mySwiper', {
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
 }
 // const swiper = new Swiper('.swiper', {
 //   // Optional parameters
