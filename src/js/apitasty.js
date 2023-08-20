@@ -4,6 +4,9 @@ import Notiflix from 'notiflix';
 axios.defaults.baseURL =
   'https://tasty-treats-backend.p.goit.global/api/events';
 
+// axios.defaults.baseURL =
+//   'https://tasty-treats-backend.p.goit.global/HestonChan.png';
+
 axios.interceptors.response.use(
   response => {
     return response;
@@ -16,10 +19,10 @@ axios.interceptors.response.use(
 
 async function fetchMasterClass() {
   const response = await axios.get('');
-  const masterClass = response.data;
-  console.log(masterClass);
+  // const masterClass = response.data;
+  console.log(response.data);
 
-  return masterClass;
+  return response.data;
 }
 
 export { fetchMasterClass };

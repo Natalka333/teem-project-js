@@ -1,8 +1,14 @@
-import Swiper, { Pagination, Navigation, Autoplay } from 'swiper';
-import 'swiper/swiper-bundle.min.css';
+// import Swiper, { Pagination, Navigation } from 'swiper';
+// import 'swiper/swiper-bundle.min.css';
+// import Swiper from 'swiper';
 import { fetchMasterClass } from './apiTasty';
 
-const swiperContainerEl = document.querySelector('.swiper-container');
+// import 'swiper/swiper-bundle.min.css';
+// import 'swiper/swiper-bundle.min.mjs';
+// import Swiper, { Pagination, Navigation } from 'swiper';
+
+const swiperContainerEl = document.querySelector('.swiper');
+const swiperWrapperEl = document.querySelector('.swiper-wrapper');
 
 async function renderGallery() {
   const masterClassData = await fetchMasterClass();
@@ -26,26 +32,29 @@ async function renderGallery() {
       })
       .join('');
 
-    swiperContainerEl.innerHTML = markup;
+    swiperContainerEl.insertAdjacentHTML('beforeend', markup);
   }
-
-  // const allInContainer = document.querySelector('.event');
-
-  // fetchMasterClass().then(data => {
-  //   allInContainer.insertAdjacentHTML('beforeend', renderGallery);
-  // });
-  const swiper = new Swiper('.swiper-container', {
-    modules: [Pagination, Navigation, Autoplay],
-    allowSlideNext: true,
-    pagination: {
-      el: '.page',
-      clickable: true,
-    },
-    autoplay: {
-      delay: 1500,
-    },
-    speed: 800,
-    loop: true,
-  });
 }
-// renderGallery();
+// const swiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   direction: 'vertical',
+//   loop: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
+// });
+
+renderGallery();

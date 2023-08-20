@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/swiper.css" />
     <link
@@ -39,11 +42,28 @@
           </button>
         </section>
       </div>
-      <!-- slaider -->
 
-      <div class="swiper-container">
-        <div class="swiper-wrapper"></div>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            https://cdn2.thecatapi.com/images/kxUakBB2o.jpg
+          </div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
       </div>
     </main>
     <div class="backdrop is-hidden" data-order>
@@ -92,6 +112,7 @@
         <button type="submit" class="input-button" disabled>Send</button>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js" type="module"></script>
     <script src="./js/apiTasty.js" type="module"></script>
     <script src="./js/index.js" type="module"></script>
