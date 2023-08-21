@@ -42,3 +42,21 @@
 .hero {
   width: 889px;
 }
+/* // HERO-DARK-THEME //
+
+.dark-theme .event-title{
+    color: var(--white-d);
+}
+.dark-theme .event-text{
+    color: var(--white-d);
+}
+.dark-theme .event-order{
+    background-color: transparent;
+    color: var(--white-d);
+}
+.dark-theme span.swiper-pagination-bullet{
+    background-color: var(--white-d);
+}
+.dark-theme span.swiper-pagination-bullet-active{
+    background: var(--green);
+} */
