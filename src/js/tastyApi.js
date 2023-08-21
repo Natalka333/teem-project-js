@@ -1,5 +1,4 @@
 import axios from 'axios';
-import Notiflix from 'notiflix';
 
 const BASE_URL = `https://tasty-treats-backend.p.goit.global/api/events`;
 
