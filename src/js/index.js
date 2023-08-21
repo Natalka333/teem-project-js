@@ -4,7 +4,7 @@
 
 // import 'swiper/swiper-bundle.min.css';
 import 'swiper/swiper-bundle.min.mjs';
-import Swiper, { Pagination, Navigation } from 'swiper';
+import Swiper, { Pagination, Navigation, Autoplay } from 'swiper';
 import '../../node_modules/swiper/swiper-bundle.css';
 
 // Swiper.use([Navigation, Pagination]);
@@ -25,7 +25,7 @@ function createMarkupSwiper(arrSliders) {
     arrSliders
       .map(
         ({ cook, topic }) =>
-          `<div class="hero_swiper-slide">
+          `<div class="hero_swiper-slide card">
                 <div class=" hero_slider-images">
                     <div class="hero_image-container-1"><img class="image-1" src=${cook.imgUrl} alt=${cook.name}></div>
                     <div class="hero_image-container-2">
@@ -56,12 +56,33 @@ const swiper = new Swiper('.image-slider', {
   loop: true,
 });
 
-// const swiper = new Swiper('.swiper-container', {
-//   modules: [Pagination, Navigation, Autoplay],
-//   allowSlideNext: true,
-//   loop: true,
+// fetchMasterClass()
+//   .then(data => {
+//     createMarkupSwiper(data);
+//   })
+//   .catch(error => console.log(error));
 
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-// });
+// function createMarkupSwiper(arrSliders) {
+//   const swiperWrapperEl = document.querySelector('.swiper-wrapper');
+
+//   swiperWrapperEl.insertAdjacentHTML(
+//     'beforeend',
+//     arrSliders
+//       .map(
+//         ({ cook, topic }) =>
+//           `<div class="swiper-slide" id="twist">
+//             <div class="hero">
+//               <div class="cook" style="background-image: url(${cook.imgUrl});"></div>
+//               <div class="preview-dish-card">
+//                 <div class="preview-dish" style="background-image: url(${topic.previewUrl});"></div>
+//                 <p class="dish-name">${topic.name}</p>
+//                 <p class="dish-area">${topic.area}</p>
+//               </div>
+//               <div class="dish" style="background-image: url(${topic.previewUrl});"></div>
+//             </div>
+//           </div>`
+//       )
+
+//       .join('')
+//   );
+// }
