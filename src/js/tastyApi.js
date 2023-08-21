@@ -1,25 +1,20 @@
 import axios from 'axios';
 import Notiflix from 'notiflix';
 
-axios.defaults.baseURL =
-  'https://tasty-treats-backend.p.goit.global/api/events';
-
-axios.interceptors.response.use(
-  response => {
-    return response;
-  },
-  error => {
-    Notiflix.Notify.failure('Something went wrong. Please try again later.');
-    return Promise.reject(error);
-  }
-);
+const BASE_URL = `https://tasty-treats-backend.p.goit.global/api/events`;
 
 async function fetchMasterClass() {
-  const response = await axios.get();
+  try {
+    const response = await axios.get(BASE_URL);
 
-  console.log(response.data);
-
-  return response.data;
+    if (response.status === 404) {
+      throw new Error(response.status);
+    }
+    console.log(response.data);
+    return response.data;
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export { fetchMasterClass };
