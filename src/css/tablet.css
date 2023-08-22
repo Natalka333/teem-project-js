@@ -4,6 +4,11 @@
   }
 }
 
+.hero-list {
+  padding-top: 65px;
+  padding-bottom: 40px;
+}
+
 .title {
   width: 446px;
   margin-bottom: 16px;

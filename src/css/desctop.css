@@ -10,6 +10,11 @@
   overflow: visible;
 }
 
+.hero-list {
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
 .title {
   display: flex;
   flex-wrap: wrap;
