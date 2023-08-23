@@ -23,13 +23,15 @@ function createMarkupSwiper(arrSliders) {
         ({ cook, topic }) =>
           `<div class="swiper-slide">
                 <div class="slider-images card">
-                    <div class="image-container-1"><img class="image-1" src="${cook.imgUrl}" alt="${cook.name}"></div>
+                    <div class="image-container-1">
+										<img class="image-1" src="${cook.imgUrl}" alt="${cook.name}"></div>
                     <div class="image-container-2">
                         <img class="image-2" src="${topic.previewUrl}" alt="${cook.name}">
                         <h2 class="image-title">${topic.name}</h2>
                         <p class="image-descraption">${topic.area}</p>
                     </div>
-                    <div class="image-container-3"><img class="image-3" src="${topic.imgUrl}" alt="${cook.name}"></div>
+                    <div class="image-container-3">
+										<img class="image-3" src="${topic.imgUrl}" alt="${cook.name}"></div>
                 </div>
             </div>`
       )
